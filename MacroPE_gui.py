@@ -37,6 +37,9 @@ class MacroPEapp(QMainWindow):
         self.create_feature_grid()
         self.create_log_area()
 
+        with open("assets/style.qss", "r", encoding="utf-8") as f:
+            self.setStyleSheet(f.read())
+
     def create_file_selection(self):
         self.top_layout = QHBoxLayout()
 
